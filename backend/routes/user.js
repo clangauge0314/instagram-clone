@@ -7,7 +7,7 @@ const {
   getProfile,
   editProfile,
   getSuggestedUsers,
-  followOrUnfollow,
+  follow,
 } = require("../controllers/user");
 const authMiddleware = require("../middlewares/authMiddleware");
 const upload = require("../middlewares/multer");
@@ -19,10 +19,10 @@ router.get("/profile/:id", authMiddleware, getProfile);
 router.post(
   "/profile/edit",
   authMiddleware,
-  upload.single("image"),
+  upload.single("profilePicture"),
   editProfile
 );
-router.get("/suggested-users", authMiddleware, getSuggestedUsers);
-router.post("/follow/:id", authMiddleware, followOrUnfollow);
+router.get("/suggest-users", authMiddleware, getSuggestedUsers);
+router.post("/follow/:id", authMiddleware, follow);
 
 module.exports = router;
