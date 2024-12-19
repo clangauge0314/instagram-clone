@@ -107,7 +107,7 @@ exports.login = async (req, res) => {
         maxAge: 1 * 24 * 60 * 60 * 1000,
       })
       .json({
-        message: `Welcome back ${user.username}`,
+        username: user.username,
         success: true,
         user,
       });

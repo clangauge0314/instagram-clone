@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
@@ -24,7 +23,7 @@ const LoginPage = () => {
         formData
       );
       console.log("Login successful:", response.data);
-      toast.success(`${response.data.message}`, {
+      toast.success(`${response.data.username}님 환영합니다!`, {
         position: "top-right",
         autoClose: 3000,
       });
@@ -52,7 +51,6 @@ const LoginPage = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <ToastContainer />
       <div className="w-full max-w-md bg-white border border-gray-300 rounded-xl shadow-lg p-12">
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
           Ingstagram

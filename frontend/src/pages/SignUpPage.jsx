@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -60,7 +59,6 @@ const SignUpPage = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50">
-      <ToastContainer />
       <div className="w-full max-w-md bg-white border border-gray-300 rounded-xl shadow-lg p-12">
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">
           Ingstagram
